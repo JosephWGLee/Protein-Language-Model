@@ -1,1 +1,34 @@
 *:Zone.Identifier
+
+#Data folders and files
+/embeddings
+/fasta-file
+/proteins
+/MMseqs2
+/assets/proteins/models
+
+*.feather
+*.csv
+*.tsv
+*.h5
+*.bin
+*.pt
+*.tfrecord
+*.ckpt
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+env/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
