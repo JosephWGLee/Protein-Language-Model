@@ -6,15 +6,15 @@
 This repository contains a modular implementation of a protein language model using ESM2-embeddings, TensorFlow, and a JAX/FLAX-based architecture. It is an extension of the Protein Language Model found in Deep Learning for Biology and uses the CAFA 3 dataset. 
 ## Improvements 
 
-Feature Engineering
+**Feature Engineering**
 
 To improve model generalisation, the training dataset was augmented with protein sequences from species with >80% homology to humans (Mus musculus and Rattus norvegicus). This helps the model distinguish protein functions across mammals more effectively and significantly increases the dataset size.
 
-Mitigating Overfitting
+**Mitigating Overfitting**
 
 I implemented MMseqs2 to cluster sequences into ~500 functional groups. By applying Group Stratified K-Fold cross-validation, I reduced overfitting to ensure the model is evaluated on non-overlapping clusters, which prevents data leakage from similar sequences and provides a more accurate assessment of accuracy than train/test/split.
 
-Architecture Tuning
+**Architecture Tuning**
 
 MLP had additional layers added to improve generalisation and better capture sequence-function relationships. 
 ## Comparison to original model 
@@ -37,7 +37,7 @@ Compared to the baseline, the recall (true positive rate) is almost doubled, whi
 | test | 0.080675 | 0.978032 | 0.125820 | 0.435193 | 0.410439| 0.879234| 
 
 
-Analysis
+**Analysis**
 
 Models converge within the first 50 steps, with validation metrics closely following training performance. AUPRC is still steadily improving, so it may benefit from additional steps or additional architectures to improve recall further. Precision is improving faster than recall, suggesting the model is confident but still missing out on true predictions.  
 
@@ -52,7 +52,8 @@ The model outperforms simple coin flips or proportional predictions.
 ![alt text](https://github.com/JosephWGLee/Protein-Language-Model/blob/main/assets/Best_performing.png "Best performing")
 
 ## Repository structure 
-Python 3.10
+
+**Python 3.10**
 
 ```text
 Protein-Language-Model/
@@ -65,14 +66,14 @@ Protein-Language-Model/
 └── requirements.txt   # Core dependencies
 ```
 
-Clone the Repo
+**Clone the Repo**
 
 ```text
 git clone https://github.com/josephWGLee/Protein-Language-Model.git
 cd Protein-Language-Model
 ```
 
-Install Dependencies 
+**Install Dependencies**
 
 ```text
 pip install -r requirements.txt
