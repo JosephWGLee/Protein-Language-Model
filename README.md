@@ -55,22 +55,22 @@ The model outperforms simple coin flips or proportional predictions.
 Python 3.10
 
 Protein-Language-Model/ 
-├── assets/ # Visualisations
-├── notebooks/ # Polished demo notebook 
-├── src/ # Key functions  
-├── .gitignore # Shields repo from large .feather/data/embedding files 
-├── ReadMe.md
-├── requirements-lock.txt # Exhaustive dependencies (Python 3.10 + multiple dependencies)
-└── requirements.txt # Core dependencies 
+├── assets/            # Visualisations
+├── notebooks/         # Polished demo notebooks 
+├── src/               # Modularised core functions
+├── .gitignore         # Shields repo from large data files 
+├── README.md          # Project documentation
+├── requirements-lock.txt
+└── requirements.txt   # Core dependencies
 
 Clone the Repo
 
 git clone https://github.com/josephWGLee/Protein-Language-Model.git
-cd Protein-Language-Model 
+cd Protein-Language-Model
 
 Install Dependencies 
 
-pip install -r requirements.txt 
+pip install -r requirements.txt
 
 
 Note on Data: Raw embedding files are excluded due to size constraints. However, scripts to download the CAFA 3 datasets and the ESM-2 weights are included within the notebooks/ directory. 
