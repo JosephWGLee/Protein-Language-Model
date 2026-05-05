@@ -19,7 +19,7 @@ Architecture Tuning
 MLP had additional layers added to improve generalisation and better capture sequence-function relationships. 
 ## Comparison to original model 
 
-Compared to the baseline, the recall (true positive rate) is almost doubled, whilst maintaining a higher level of precision (ratio of true positives to all predicted positives). AUROC and accuracy are misleading due to the imbalance multilabel setting.
+Compared to the baseline, the recall (true positive rate) is almost doubled, whilst maintaining a higher level of precision (ratio of true positives to all predicted positives). AUROC and accuracy are misleading due to the imbalanced multilabel setting.
 
 
 ### My Model
@@ -41,20 +41,21 @@ Analysis
 
 Models converge within the first 50 steps, with validation metrics closely following training performance. AUPRC is still steadily improving, so it may benefit from additional steps or additional architectures to improve recall further. Precision is improving faster than recall, suggesting the model is confident but still missing out on true predictions.  
 
-!(assets/Loss_Validation_Metrics.png)
+![alt text](https://github.com/JosephWGLee/Protein-Language-Model/blob/main/assets/Loss_Validation_Metrics.png "Validation_Metrics") 
 
 Predictions generally capture broad trends but miss out on rarer functions. The model still overpredicts functions of certain families of proteins, which are visible as faint lines. 
 
-!(assets/Functional_annotations.png)
+![alt text](https://github.com/JosephWGLee/Protein-Language-Model/blob/main/assets/Functional_annotations.png "Functional_annotations")
 
 The model outperforms simple coin flips or proportional predictions.
 
-!(assets/Best_performing.png)
+![alt text](https://github.com/JosephWGLee/Protein-Language-Model/blob/main/assets/Best_performing.png "Best performing")
 
 ## Repository structure 
 Python 3.10
 
-Protein-Language-Model/ 
+```text
+Protein-Language-Model/
 ├── assets/            # Visualisations
 ├── notebooks/         # Polished demo notebooks 
 ├── src/               # Modularised core functions
@@ -62,16 +63,20 @@ Protein-Language-Model/
 ├── README.md          # Project documentation
 ├── requirements-lock.txt
 └── requirements.txt   # Core dependencies
+```
 
 Clone the Repo
 
+```text
 git clone https://github.com/josephWGLee/Protein-Language-Model.git
 cd Protein-Language-Model
+```
 
 Install Dependencies 
 
+```text
 pip install -r requirements.txt
-
+```
 
 Note on Data: Raw embedding files are excluded due to size constraints. However, scripts to download the CAFA 3 datasets and the ESM-2 weights are included within the notebooks/ directory. 
 
