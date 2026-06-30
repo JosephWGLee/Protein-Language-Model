@@ -60,8 +60,8 @@ Protein-Language-Model/
 ├── assets/            # Visualisations
 ├── notebooks/         # Polished demo notebooks 
 ├── src/               # Modularised core functions
-├── .gitignore         # Shields repo from large data files 
-├── README.md          # Project documentation
+├── .gitignore         
+├── README.md          
 ├── requirements-lock.txt
 └── requirements.txt   # Core dependencies
 ```
